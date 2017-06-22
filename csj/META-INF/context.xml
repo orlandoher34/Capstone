@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+<Resource name="jdbc/CITIZEN"
+
+auth="Container"
+
+type="javax.sql.DataSource"
+
+username="dbadmin"
+
+password="db123"
+
+driverClassName="com.mysql.jdbc.Driver"
+
+url="jdbc:mysql:/localhost:3306/csj"
+
+maxActive="15"
+
+maxIdle="3"/>
+
+</Context>

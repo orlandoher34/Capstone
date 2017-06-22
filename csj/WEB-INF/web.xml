@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	 version="3.0">
+  <servlet>
+        <servlet-name>AutoCompleteServlet</servlet-name>
+        <servlet-class>AutoCompleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AutoCompleteServlet</servlet-name>
+        <url-pattern>/autocomplete</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
+
+<resource-ref>
+
+<description>CITIZENdb</description>
+
+<res-ref-name>jdbc/CITIZEN</res-ref-name>
+
+<res-type>javax.sql.DataSource</res-type>
+
+<res-auth>Container</res-auth>
+
+</resource-ref>
+
+
+  <servlet>
+<servlet-name>AccountSpecialist</servlet-name>
+<servlet-class>servlet.AccountSpecialistServlet</servlet-class>
+</servlet>
+
+  <servlet-mapping>
+<servlet-name>AccountSpecialist</servlet-name>
+<url-pattern>/AccountSpecialist</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>EditAccount</servlet-name>
+<servlet-class>servlet.EditCustomerAccount</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>EditAccount</servlet-name>
+<url-pattern>/EditAccount</url-pattern>
+</servlet-mapping>
+	
+<servlet>
+<servlet-name>TechnicalSupport</servlet-name>
+<servlet-class>servlet.TechnicalSupportServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>TechnicalSupport</servlet-name>
+<url-pattern>/TechnicalSupport</url-pattern>
+</servlet-mapping>
+ 
+   <display-name>Customer Portal</display-name>
+  <description>
+    Customer Portal
+  </description>
+ 
+  <servlet>
+    <servlet-name>CustomerController</servlet-name>
+    <servlet-class>servlet.CustomerController</servlet-class>
+  </servlet>
+ 
+  <!-- Define the Manager Servlet Mapping -->
+  <servlet-mapping>
+    <servlet-name>CustomerController</servlet-name>
+      <url-pattern>/servlet/CustomerController</url-pattern>
+  </servlet-mapping>
+  
+   <display-name>Customer Info Controller</display-name>
+  <description>
+    Customer Info Controller
+  </description>
+ 
+  <servlet>
+    <servlet-name>CustomerInfoController</servlet-name>
+    <servlet-class>servlet.CustomerInfoController</servlet-class>
+  </servlet>
+ 
+  <!-- Define the Manager Servlet Mapping -->
+  <servlet-mapping>
+    <servlet-name>CustomerInfoController</servlet-name>
+      <url-pattern>/servlet/CustomerInfoController</url-pattern>
+  </servlet-mapping>
+  
+    <display-name>Customer Subscription Controller</display-name>
+  <description>
+    Customer Subscription Controller
+  </description>
+ 
+  <servlet>
+    <servlet-name>CustomerSubscriptionController</servlet-name>
+    <servlet-class>servlet.CustomerSubscriptionController</servlet-class>
+  </servlet>
+ 
+  <!-- Define the Manager Servlet Mapping -->
+  <servlet-mapping>
+    <servlet-name>CustomerSubscriptionController</servlet-name>
+      <url-pattern>/subscription</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>HelloWorld</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+
+	    <servlet>
+        <servlet-name>CalendarProgram</servlet-name>
+        <servlet-class>CalendarProgram</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>CalendarProgram</servlet-name>
+        <url-pattern>/CalendarProgram</url-pattern>
+    </servlet-mapping>
+	
+	 <servlet>
+        <servlet-name>AddToEmailListServlet</servlet-name>
+        <servlet-class>AddToEmailListServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>AddToEmailListServlet</servlet-name>
+        <url-pattern>/AddToEmailListServlet</url-pattern>
+    </servlet-mapping>
+	
+	
+  <servlet>
+        <servlet-name>SerializeCatalog</servlet-name>
+        <servlet-class>SerializeCatalog</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>SerializeCatalog</servlet-name>
+        <url-pattern>/SerializeCatalog</url-pattern>
+    </servlet-mapping>
+
+ <servlet>
+        <servlet-name>CatalogItem</servlet-name>
+        <servlet-class>CatalogItem</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>CatalogItem</servlet-name>
+        <url-pattern>/CatalogItem</url-pattern>
+    </servlet-mapping>
+	
+	<servlet>
+        <servlet-name>MakeTable</servlet-name>
+        <servlet-class>MakeTable</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>MakeTable</servlet-name>
+        <url-pattern>/MakeTable</url-pattern>
+    </servlet-mapping>
+	
+		<servlet>
+        <servlet-name>SetCookies</servlet-name>
+        <servlet-class>SetCookies</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>SetCookies</servlet-name>
+        <url-pattern>/SetCookies</url-pattern>
+    </servlet-mapping>
+	
+			<servlet>
+        <servlet-name>ShowCookies</servlet-name>
+        <servlet-class>ShowCookies</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>ShowCookies</servlet-name>
+        <url-pattern>/ShowCookies</url-pattern>
+    </servlet-mapping>
+
+			<servlet>
+        <servlet-name>RepeatVisitor</servlet-name>
+        <servlet-class>RepeatVisitor</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>RepeatVisitor</servlet-name>
+        <url-pattern>/RepeatVisitor</url-pattern>
+    </servlet-mapping>
+	
+			<servlet>
+        <servlet-name>RepeatVisitor2</servlet-name>
+        <servlet-class>RepeatVisitor2</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>RepeatVisitor2</servlet-name>
+        <url-pattern>/RepeatVisitor2</url-pattern>
+    </servlet-mapping>
+	
+			<servlet>
+        <servlet-name>ClientAccessCounts</servlet-name>
+        <servlet-class>ClientAccessCounts</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>ClientAccessCounts</servlet-name>
+        <url-pattern>/ClientAccessCounts</url-pattern>
+    </servlet-mapping>
+	
+			<servlet>
+        <servlet-name>ShowSession</servlet-name>
+        <servlet-class>ShowSession</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>ShowSession</servlet-name>
+        <url-pattern>/ShowSession</url-pattern>
+    </servlet-mapping>
+	
+			<servlet>
+        <servlet-name>OrderPage</servlet-name>
+        <servlet-class>OrderPage</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>OrderPage</servlet-name>
+        <url-pattern>/OrderPage</url-pattern>
+    </servlet-mapping>
+	
+		<servlet>
+        <servlet-name>OrderForm</servlet-name>
+        <servlet-class>Orderform</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>OrderForm</servlet-name>
+        <url-pattern>/OrderForm</url-pattern>
+    </servlet-mapping>
+	
+	
+				<servlet>
+        <servlet-name>ShowItems</servlet-name>
+        <servlet-class>ShowItems</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>ShowItems</servlet-name>
+        <url-pattern>/ShowItems</url-pattern>
+    </servlet-mapping>
+	
+	<servlet>
+        <servlet-name>OrderDetails</servlet-name>
+        <servlet-class>OrderDetails</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>OrderDetails</servlet-name>
+        <url-pattern>/OrderDetails</url-pattern>
+    </servlet-mapping>
+	
+	<servlet>
+        <servlet-name>Cancel</servlet-name>
+        <servlet-class>Cancel</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>Cancel</servlet-name>
+        <url-pattern>/Cancel</url-pattern>
+    </servlet-mapping>
+	
+		<servlet>
+        <servlet-name>OrderStatus</servlet-name>
+        <servlet-class>OrderStatus</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>OrderStatus</servlet-name>
+        <url-pattern>/OrderStatus</url-pattern>
+    </servlet-mapping>
+	
+			<servlet>
+        <servlet-name>KidsBooksPage</servlet-name>
+        <servlet-class>KidsBooksPage</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>KidsBooksPage</servlet-name>
+        <url-pattern>/KidsBooksPage</url-pattern>
+    </servlet-mapping>
+	
+			<servlet>
+        <servlet-name>TechBooksPage</servlet-name>
+        <servlet-class>TechBooksPage</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>TechBooksPage</servlet-name>
+        <url-pattern>/TechBooksPage</url-pattern>
+    </servlet-mapping>
+	
+				<servlet>
+        <servlet-name>BestDeal_ShowItems</servlet-name>
+        <servlet-class>BestDeal_ShowItems</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>BestDeal_ShowItems</servlet-name>
+        <url-pattern>/BestDeal_ShowItems</url-pattern>
+    </servlet-mapping>
+	
+				<servlet>
+        <servlet-name>Checkout</servlet-name>
+        <servlet-class>Checkout</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>Checkout</servlet-name>
+        <url-pattern>/Checkout</url-pattern>
+    </servlet-mapping>
+	
+					<servlet>
+        <servlet-name>Phones</servlet-name>
+        <servlet-class>Phones</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>Phones</servlet-name>
+        <url-pattern>/Phones</url-pattern>
+    </servlet-mapping>
+	
+						<servlet>
+        <servlet-name>Tablets</servlet-name>
+        <servlet-class>Tablets</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Tablets</servlet-name>
+        <url-pattern>/Tablets</url-pattern>
+    </servlet-mapping>
+	
+						<servlet>
+        <servlet-name>Laptop</servlet-name>
+        <servlet-class>Laptop</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Laptop</servlet-name>
+        <url-pattern>/Laptop</url-pattern>
+    </servlet-mapping>
+	
+						<servlet>
+        <servlet-name>TV</servlet-name>
+        <servlet-class>TV</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TV</servlet-name>
+        <url-pattern>/TV</url-pattern>
+    </servlet-mapping>
+	
+						<servlet>
+        <servlet-name>CatalogPage</servlet-name>
+        <servlet-class>CatalogPage</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>CatalogPage</servlet-name>
+        <url-pattern>/CatalogPage</url-pattern>
+    </servlet-mapping>
+	
+							<servlet>
+        <servlet-name>Catalog</servlet-name>
+        <servlet-class>Catalog</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>Catalog</servlet-name>
+        <url-pattern>/Catalog</url-pattern>
+    </servlet-mapping>
+	
+				<servlet>
+        <servlet-name>ShoppingCart</servlet-name>
+        <servlet-class>ShoppingCart</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>ShoppingCart</servlet-name>
+        <url-pattern>/ShoppingCart</url-pattern>
+    </servlet-mapping>
+	
+					<servlet>
+        <servlet-name>Confirmationpage</servlet-name>
+        <servlet-class>Confirmationpage</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>Confirmationpage</servlet-name>
+        <url-pattern>/Confirmationpage</url-pattern>
+    </servlet-mapping>
+	
+	<servlet>
+        <servlet-name>LotteryNumbers</servlet-name>
+        <servlet-class>LotteryNumbers</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>LotteryNumbers</servlet-name>
+        <url-pattern>/LotteryNumbers</url-pattern>
+    </servlet-mapping>
+
+	  <servlet>
+        <servlet-name>ShowMessage</servlet-name>
+        <servlet-class>ShowMessage</servlet-class>
+
+   	<init-param>
+      		<param-name>
+        		message
+     		 </param-name>
+      		<param-value>
+        		Hello World From O. Hernandez
+      		</param-value>
+    	</init-param>
+
+    	<init-param>
+      		<param-name>
+        		repeats
+      		</param-name>
+      		<param-value>
+        		20
+      		</param-value>
+    	</init-param>
+
+    </servlet>
+	
+	  <servlet>
+        <servlet-name>ShowMsg</servlet-name>
+        <servlet-class>ShowMessage</servlet-class>
+    </servlet>
+	
+	  <servlet-mapping>
+        <servlet-name>ShowMessage</servlet-name>
+        <url-pattern>/ShowMessage</url-pattern>
+        <url-pattern>/ShowMessage1</url-pattern>
+        <url-pattern>/ShowMessage2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ShowMsg</servlet-name>
+        <url-pattern>/ShowMsg</url-pattern>
+    </servlet-mapping>
+	
+	
+</web-app>
